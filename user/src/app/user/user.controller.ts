@@ -1,9 +1,9 @@
-import express from 'express';
+import { Router, Request, Response } from 'express';
 
 class UserController {
   public path = '/';
 
-  public router = express.Router();
+  public router = Router();
 
   private users: string[] = [
     'leonardo',
@@ -18,7 +18,7 @@ class UserController {
     this.router.get(this.path, this.getAllUsers);
   }
 
-  getAllUsers = (request: express.Request, response: express.Response) => {
+  getAllUsers = (request: Request, response: Response) => {
     response.send(this.users);
   }
 }

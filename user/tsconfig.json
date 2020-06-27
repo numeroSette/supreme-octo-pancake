@@ -21,14 +21,8 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@controllers/*": [
-        "./src/app/controllers/*"
-      ],
-      "@routes/*": [
-        "./src/app/routes/*"
-      ],
-      "@models/*": [
-        "./src/app/models/*"
+      "@user/*": [
+        "./src/app/user/*"
       ],
     }
   }

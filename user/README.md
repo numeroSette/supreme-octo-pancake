@@ -9,3 +9,5 @@ Yarn: 1.22.4
 - Comandos
   yarn dev
   yarn jest
+  yarn build
+  yarn start

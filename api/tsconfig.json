@@ -23,14 +23,14 @@
     "paths": {
       "@user/*": [
         "./src/app/user/*"
-      ],
-    },
+      ]
+    }
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "**/*.spec.ts",
-    "**/*.test.ts",
+    "**/*.test.ts"
   ]
 }

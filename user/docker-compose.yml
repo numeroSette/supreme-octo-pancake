@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    ports:
+      - "3334:3334"
+    command: yarn dev
+    depends_on:
+      - "dynamodb"
+    links:
+      - "dynamodb"
+  
+  dynamodb:
+    container_name: dynamodb 
+    image: amazon/dynamodb-local
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - dynamodata:/home/dynamodblocal
+    working_dir: /home/dynamodblocal
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ."
+
+volumes:
+  dynamodata: {}

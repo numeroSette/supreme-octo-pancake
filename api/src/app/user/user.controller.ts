@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import UserClient from './user.service';
+// import UserClient from './user.service';
 
 class UserController {
   public path = '/user';
@@ -20,9 +20,8 @@ class UserController {
   }
 
   show = async (request: Request, response: Response) => {
-    const res = await UserClient.getUserById({ id: '23' });
-
-    response.send(res);
+    // const res = await UserClient.getUserById({ id: '23' });
+    response.send(this.users);
   }
 }
 

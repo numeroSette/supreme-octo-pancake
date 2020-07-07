@@ -14,6 +14,8 @@ module.exports = {
     ['module-resolver', {
       alias: {
         '@user': './src/app/user',
+        '@file': './src/app/file',
+        '@utils': './src/utils',
       },
     }],
   ],

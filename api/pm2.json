@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "app",
+      "script": "./dist/bin/server.js",
+      "watch": [
+        "dist"
+      ],
+      "instances": 4,
+      "autorestart": true,
+      "max_memory_restart": "1G",
+      "exp_backoff_restart_delay": 100,
+      "instance_var": "INSTANCE_ID",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

@@ -14,7 +14,7 @@ $ docker-compose logs --tail 100 -f production
 
 Start development enviroment 
 ```console
-$ docker-compose up dev
+$ docker-compose up development
 ```
 
 Re-building docker
@@ -53,3 +53,9 @@ go build -o /bin/app && /bin/app
 cd src
 go run main.go
 ```
+
+Generated proto
+```bash
+sudo apt-get install golang-goprotobuf-dev
+```
+protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:cmd/pb
